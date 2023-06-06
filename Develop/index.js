@@ -1,7 +1,6 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const generateMarkdown = require("./utils/generateMarkdown");
-const path = require("path");
+const generateMarkdown = require("./utils/generateMarkdown.js");
 
 // WHEN I am prompted for information about my application repository
 // THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
@@ -9,17 +8,17 @@ const path = require("path");
 const questions = [
   {
     type: "input",
-    message: "WWhat is the title of the project?",
+    message: "What is this project's title?",
     name: "title"
   },
   {
     type: "input",
-    message: "What is this project's description?",
+    message: "What is the description for this project?",
     name: "description"
   },
   {
     type: "input",
-    message: "What are the install instructions?",
+    message: "What are this project's install instructions?",
     name: "install",
     default: "npm i"
   },
@@ -31,7 +30,7 @@ const questions = [
   {
     type: "input",
     message: "What is your Table of Contents?",
-    name: "table of contents"
+    name: "tableOfContents"
   },
   {
     type: "input",
@@ -57,17 +56,21 @@ const questions = [
   }
 ]
 
-// function to write README file
-function writeToFile(filename, data) {
-  return fs.writeFileSync(path.join(process.cwd(), filename), data);
+//function to create and write into README
+function writeToFile(fileName, data) {
+  fs.writeFile(fileName, data, (err) =>
+    err ? console.error(err) : console.log("README was successfully generated!")
+  );
 }
 
-// function to initialize program
+//function to initialize the app
 function init() {
-  inquirer.prompt(questions).then(response => {
-    writeToFile("sampleREADME.md", generateMarkdown(response))
+  console.log("Initializing...");
+
+  inquirer.prompt(questions).then((answers) => {
+    writeToFile("README.md", generateMarkdown(answers));
   });
 }
 
-// function call to initialize program
+//function call to initialize app
 init();
