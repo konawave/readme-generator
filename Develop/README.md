@@ -1,8 +1,8 @@
 # undefined 
-  ![License Badge](https://img.shields.io/badge/License-undefined-green)
+  ![License Badge](https://img.shields.io/badge/License-MIT-green)
 
   ## Description 
-  undefined
+  How are you
   ---
   ## Table of Contents
 
@@ -17,22 +17,22 @@
 
 To install necessary dependencies, run the following command:
 
-```undefined```
+```Who```
 
 ## Usage
-undefined
+What
 
 ## Contributing
-undefined
+lka sd
 
 ## Tests
 undefined
 
 ## Questions
-GitHub profile: [undefined](https://github.com/undefined)
+GitHub profile: [asdasd](https://github.com/asdasd)
 
-For questions, please email at undefined
+For questions, please email at asdasf
 
 ## License 
-  License: undefined
+  License: MIT
 
