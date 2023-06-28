@@ -24,7 +24,7 @@ function renderLicenseSection(license) {
 // function to generate markdowns for README using answers passed from the user
 function generateMarkdown(data) {
   return (
-    `# ${data.project_title} 
+    `# ${data.title} 
   ${renderLicenseBadge(data.license)}
 
   ## Description 
