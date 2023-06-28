@@ -49,6 +49,16 @@ const questions = [
     name: "contribute"
   },
   {
+  type: "input",
+    message: "What is your email address?",
+    name: "email"
+  },
+  {
+    type: "input",
+      message: "What is your username?",
+      name: "username"
+  },
+  {
     type: "list",
     message: "How is this project licensed?",
     name: "license",

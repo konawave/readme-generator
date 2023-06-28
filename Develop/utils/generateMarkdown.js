@@ -24,11 +24,11 @@ function renderLicenseSection(license) {
 // function to generate markdowns for README using answers passed from the user
 function generateMarkdown(data) {
   return (
-    `# ${data.project_title} 
-  ${renderLicenseBadge(data.project_license)}
+    `# ${data.title} 
+  ${renderLicenseBadge(data.license)}
 
   ## Description 
-  ${data.project_description}
+  ${data.description}
   ---
   ## Table of Contents
 
@@ -37,7 +37,7 @@ function generateMarkdown(data) {
 - [Contributing](#contributing)
 - [Tests](#tests)
 - [Questions](#questions)
-${renderLicenseLink(data.project_license)}
+${renderLicenseLink(data.license)}
 
 ## Installation
 
@@ -45,27 +45,27 @@ To install necessary dependencies, run the following command:
 
 ` +
     "```" +
-    `${data.project_install}` +
+    `${data.install}` +
     "```" +
     `
 
 ## Usage
-${data.project_usage}
+${data.usage}
 
 ## Contributing
-${data.project_contribution}
+${data.contribute}
 
 ## Tests
-${data.project_test}
+${data.test}
 
 ## Questions
-GitHub profile: [${data.owner_username}](https://github.com/${
-      data.owner_username
+GitHub profile: [${data.username}](https://github.com/${
+      data.username
     })
 
-For questions, please email at ${data.owner_email}
+For questions, please email at ${data.email}
 
-${renderLicenseSection(data.project_license)}
+${renderLicenseSection(data.license)}
 
 `
   );
