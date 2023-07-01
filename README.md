@@ -18,8 +18,7 @@ To install all dependents, use the npm i command.
 
 ## Usage
 
-insert video here
-text guide
+YouTube Guide Link: https://youtu.be/dqQIcafe9PM
 
 ## Contributing
 
